@@ -5,24 +5,39 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s', filen
 
 
 def calculator(op,*args):
-    if op == "1":
+    """
+    Performs a mathematic operation based on first arg
+    on the rest of the arguments.
+    Supports multiple args for addition and multiplication
+    Supports two args for subtraction and division
+    Arguments:
+    str op: "1","2","3","4"
+    list of floats *args
+    """
+    if op == "1":       # dodawanie
         result = 0
         for i in range(0,len(args[0])):
             result += args[0][i]
         return result
-    elif op == "2":
+    elif op == "2":     # odejmowanie
         return args[0][0]-args[0][1]
-    elif op == "3":
+    elif op == "3":     # mnożenie
         result = 1
         for i in range(0,len(args[0])):
             result *= args[0][i]
         return result
-    elif op == "4":
+    elif op == "4":     # dzielenie
         return args[0][0] / args[0][1]
     else:
         return None
     
 def get_vars(a):
+    """
+    Prompts the user to input variables based
+    on the operation chosen
+    Arguments:
+    str a: "many","two"
+    """
     vars = []
     if a == "many":
         i = 1
@@ -47,6 +62,7 @@ def get_vars(a):
                 logging.debug("Jedna z podanych wartości nie jest liczbą.")
                 sys.exit()
         return vars
+
 
 if __name__ == "__main__":
     operation = input(
