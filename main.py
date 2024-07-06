@@ -21,5 +21,5 @@ if __name__ == "__main__":
         operate = "Dzielę"
         result = var1 / var2
         
-    logging.debug("%s %s i %s" % operate, var1, var2)
+    logging.debug("%s %s i %s" % (operate, var1, var2))
     print(f"Wynik: {result}")
