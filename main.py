@@ -77,4 +77,5 @@ if __name__ == "__main__":
     results = dict_calculator(operation, vars)
     debug_msg = f"{results[0]} " + " i ".join(str(var) for var in vars)
     print(debug_msg)
+    logging.debug(debug_msg)
     print(f"Wynik: {results[1]}")
