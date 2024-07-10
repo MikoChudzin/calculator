@@ -4,7 +4,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s', filen
 
 
 
-def calculator(op,*args):
+def calculator(op,args):
     """
     ***OUTDATED***
     Performs a mathematic operation based on first arg
@@ -13,7 +13,7 @@ def calculator(op,*args):
     Supports two args for subtraction and division
     Arguments:
     str op: "1","2","3","4"
-    list of floats *args
+    list of floats args
     """
     if op == "1":       # dodawanie
         result = 0
