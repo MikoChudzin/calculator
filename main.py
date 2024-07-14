@@ -6,7 +6,7 @@ def dict_calculator(op):
     """
     Chooses a function to execute based on input
     Arguments:
-    str op: "1" "2" "3" "4"
+    op: str "1" "2" "3" "4"
     """
     results_dict = {
         "1" : addition,
@@ -20,7 +20,7 @@ def dict_operation(op):
     """
     Returns a string naming the kind of operation being executed
     Arguments:
-    str op: "1" "2" "3" "4"
+    op: str "1" "2" "3" "4"
     """
     operation_dict = {
         "1" : "Dodaję",
@@ -49,6 +49,11 @@ def division(args):
     return args[0] / args[1]
 
 def check_num(arg):
+    """
+    Checks if provided arg is a number
+    Arguments:
+    arg: str
+    """
     if arg.replace(".","").isnumeric():
         return True
     else:
@@ -56,6 +61,9 @@ def check_num(arg):
         sys.exit()
     
 def get_operation():
+    """
+    Provides instruction to get operation from user
+    """
     op = input(
         "Podaj działanie, posługując się odpowiednią liczbą:"
         "\n1. Dodawanie, 2. Odejmowanie, 3. Mnożenie, 4. Dzielenie: "
@@ -67,6 +75,9 @@ def get_operation():
         sys.exit()
 
 def get_base_vars():
+    """
+    Prompts user to provide 2 necessary variables for operation
+    """
     base_vars = []
     for i in range(0,2):
         next_var = input(f"Podaj składnik {i+1}: ")
@@ -75,6 +86,9 @@ def get_base_vars():
     return base_vars
 
 def get_add_vars():
+    """
+    Prompts user to provide optional variables for operation
+    """
     add_vars = []
     while True:
         next_var = input(f"Podaj następny składnik, lub wciśnij Enter aby zakończyć: ")
